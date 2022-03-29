@@ -1,0 +1,16 @@
+#menu div {
+    padding: 2px 1em;
+    background-color: #fff;
+    cursor: default;
+}
+
+#menu div:hover {
+    background-color: #68f;
+    color: #fff;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    border: solid 1px #ccc;
+}
