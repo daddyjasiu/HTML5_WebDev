@@ -3,7 +3,6 @@
     clear: both;
     float: left;
 }
-
 #game_map .cell{
     cursor: pointer;
     float: left;
@@ -18,10 +17,18 @@
     clear: both;
     line-height: 0px;
 }
-
 #game_map .player1_cell{
     color: #cc0000;
 }
 #game_map .player2_cell{
     color: #0000cc;
+}
+
+.hover{
+    background-color: beige;
+    opacity: 50%;
+}
+
+.marked{
+    background-color: beige;
 }
