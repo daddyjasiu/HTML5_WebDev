@@ -14,13 +14,22 @@ export default class BTCPrice extends React.Component {
                 console.log(usd);
                 this.setState({usdPrice: usd});
             })
+        axios.get(`https://api.coindesk.com/v1/bpi/currentprice/PLN.json`)
+            .then(res => {
+                const pln = res.data.bpi.PLN.rate;
+                console.log(pln);
+                this.setState({plnPrice: pln});
+            })
     }
 
     render() {
         return (
             <div>
-                BTC Price in USD: {this.state.usdPrice}
-                BTC Price in PLN: {this.state.plnPrice}
+                <h2>Current BTC Price in USD and PLN:</h2>
+                <ul>
+                    <li> {this.state.usdPrice} USD </li>
+                    <li> {this.state.plnPrice} PLN</li>
+                </ul>
             </div>
         )
     }
